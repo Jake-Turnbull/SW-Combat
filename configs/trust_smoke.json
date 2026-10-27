@@ -1,0 +1,17 @@
+{
+  "calibration_seeds": [7001],
+  "seeds": [8001],
+  "n_per_batch": [4, 8],
+  "n_batches": 2,
+  "trust_values": [0.0, 0.5, 1.0],
+  "similarity_methods": ["correlation_similarity", "custom"],
+  "spread_floor_quantile": 0.05,
+  "scenario": {
+    "n_features": 8,
+    "batch_effect_strength": 0.35,
+    "sample_effect_sd": 0.12,
+    "covariate_noise_sd": 0.12,
+    "feature_correlation": 0.25
+  },
+  "output_directory": "results/trust_smoke"
+}

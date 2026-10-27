@@ -1,0 +1,37 @@
+{
+  "seeds": [101, 202],
+  "bootstrap_seed": 303,
+  "n_bootstrap": 1000,
+  "scenario": {
+    "n_features": 16,
+    "batch_sizes": [12, 12, 12],
+    "n_components": 2,
+    "effect_heterogeneity": "heterogeneous",
+    "similarity_informativeness": "informative",
+    "feature_correlation": 0.35,
+    "batch_effect_strength": 0.35
+  },
+  "method_options": {
+    "naive": {
+      "weight_options": {
+        "trust": 0.75,
+        "min_effective": 3
+      }
+    },
+    "local_likelihood": {
+      "local_likelihood_options": {
+        "global_prior_penalty": 0.2,
+        "trust": 0.75
+      }
+    },
+    "mixture": {
+      "mixture_options": {
+        "n_components": 2,
+        "max_iterations": 30,
+        "seed": 17
+      }
+    }
+  },
+  "output_directory": "results/smoke",
+  "tuning_protocol": "Fixed declared settings; no tuning on these smoke seeds."
+}

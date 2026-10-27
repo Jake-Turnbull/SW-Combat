@@ -1,0 +1,96 @@
+{
+  "seeds": [
+    1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010,
+    1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020,
+    1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030,
+    1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040,
+    1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050
+  ],
+  "bootstrap_seed": 8080,
+  "n_bootstrap": 5000,
+  "scenarios": [
+    {
+      "name": "homogeneous_informative_small",
+      "n_features": 48,
+      "batch_sizes": [16, 16, 16, 16],
+      "n_components": 1,
+      "effect_heterogeneity": "homogeneous",
+      "similarity_informativeness": "informative",
+      "feature_correlation": 0.35,
+      "batch_effect_strength": 0.35
+    },
+    {
+      "name": "heterogeneous_informative_moderate",
+      "n_features": 48,
+      "batch_sizes": [32, 32, 32, 32],
+      "n_components": 2,
+      "effect_heterogeneity": "heterogeneous",
+      "similarity_informativeness": "informative",
+      "feature_correlation": 0.35,
+      "batch_effect_strength": 0.35
+    },
+    {
+      "name": "heterogeneous_partial_moderate",
+      "n_features": 48,
+      "batch_sizes": [32, 32, 32, 32],
+      "n_components": 2,
+      "effect_heterogeneity": "heterogeneous",
+      "similarity_informativeness": "partial",
+      "feature_correlation": 0.35,
+      "batch_effect_strength": 0.35
+    },
+    {
+      "name": "heterogeneous_uninformative_moderate",
+      "n_features": 48,
+      "batch_sizes": [32, 32, 32, 32],
+      "n_components": 2,
+      "effect_heterogeneity": "heterogeneous",
+      "similarity_informativeness": "uninformative",
+      "feature_correlation": 0.35,
+      "batch_effect_strength": 0.35
+    },
+    {
+      "name": "heterogeneous_misleading_moderate",
+      "n_features": 48,
+      "batch_sizes": [32, 32, 32, 32],
+      "n_components": 2,
+      "effect_heterogeneity": "heterogeneous",
+      "similarity_informativeness": "misleading",
+      "feature_correlation": 0.35,
+      "batch_effect_strength": 0.35
+    },
+    {
+      "name": "heterogeneous_informative_small",
+      "n_features": 48,
+      "batch_sizes": [16, 16, 16, 16],
+      "n_components": 2,
+      "effect_heterogeneity": "heterogeneous",
+      "similarity_informativeness": "informative",
+      "feature_correlation": 0.35,
+      "batch_effect_strength": 0.35
+    }
+  ],
+  "method_options": {
+    "naive": {
+      "weight_options": {
+        "trust": 0.75,
+        "min_effective": 5
+      }
+    },
+    "local_likelihood": {
+      "local_likelihood_options": {
+        "global_prior_penalty": 0.2,
+        "trust": 0.75
+      }
+    },
+    "mixture": {
+      "mixture_options": {
+        "n_components": 2,
+        "max_iterations": 100,
+        "seed": 17
+      }
+    }
+  },
+  "output_directory": "results/study_final",
+  "tuning_protocol": "Settings frozen before these 50 evaluation seeds; no tuning performed on study replicates. Each named scenario is summarized and paired separately."
+}

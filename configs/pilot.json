@@ -1,0 +1,40 @@
+{
+  "seeds": [
+    301, 302, 303, 304, 305, 306,
+    307, 308, 309, 310, 311, 312
+  ],
+  "bootstrap_seed": 3303,
+  "n_bootstrap": 2000,
+  "scenario": {
+    "n_features": 24,
+    "batch_sizes": [20, 20, 20, 20],
+    "n_components": 2,
+    "effect_heterogeneity": "heterogeneous",
+    "similarity_informativeness": "informative",
+    "feature_correlation": 0.35,
+    "batch_effect_strength": 0.35
+  },
+  "method_options": {
+    "naive": {
+      "weight_options": {
+        "trust": 0.75,
+        "min_effective": 5
+      }
+    },
+    "local_likelihood": {
+      "local_likelihood_options": {
+        "global_prior_penalty": 0.2,
+        "trust": 0.75
+      }
+    },
+    "mixture": {
+      "mixture_options": {
+        "n_components": 2,
+        "max_iterations": 75,
+        "seed": 17
+      }
+    }
+  },
+  "output_directory": "results/pilot",
+  "tuning_protocol": "Fixed declared settings; pilot seeds are development only and are excluded from final evaluation."
+}
