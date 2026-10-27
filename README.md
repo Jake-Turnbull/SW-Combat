@@ -1,4 +1,4 @@
-# simcombat
+# SW ComBat
 
 Research implementation of global parametric ComBat and similarity-weighted empirical Bayes ComBat. Input arrays use features by subjects orientation. The original script is preserved in `legacy/` and is not imported by the package.
 
